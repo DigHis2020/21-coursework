@@ -1,2 +1,17 @@
 the practice file is cstmc-CSV-en 
 
+so the data that you input into the df.read_csv("") line must end with a .csv
+Exactly the file that appears in my file finder. 
+
+When I tried to make the first graph
+ERROR:bokeh.core.validation.check:E-1001 (BAD_COLUMN_NAME): Glyph refers to nonexistent column name. This could either be due to a misspelling or typo, or due to an expected column being missing. : key "x" value "TOTAL_TONS", key "y" value "AC_ATTACKING" [renderer: GlyphRenderer(id='1144', ...)]
+
+
+
+artifact number did not work as an x variable 
+
+model did, but it is enumerated
+
+
+
+gonna try with an actual quantative graph now 
