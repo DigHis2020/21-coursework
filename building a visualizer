@@ -13,5 +13,42 @@ artifact number did not work as an x variable
 model did, but it is enumerated
 
 
+****
+gonna try with an actual quantative graph  
 
-gonna try with an actual quantative graph now 
+Variables I want to use: 
+
+GeneralDescription
+
+import pandas as pd
+from bokeh.plotting import figure, output_notebook, show
+from bokeh.models import ColumnDataSource
+from bokeh.models.tools import HoverTool
+output_notebook()
+
+#df = pd.read_csv('data/thor_wwii.csv')
+
+
+sample = ottking_df.sample(1000)
+source = ColumnDataSource(sample)
+
+
+p = figure()
+p.circle(x='Length', y='Width', 
+         source=source,
+         size=10, color='green')
+
+p.title.text = 'Attacking Aircraft and Munitions Dropped'
+p.xaxis.axis_label = 'Tons of Munitions Dropped'
+p.yaxis.axis_label = 'Number of Attacking Aircraft'
+
+hover = HoverTool()
+hover.tooltips=[
+    ('City', '@ManuCity'),
+    ('Manufacturer', '@Manufacturer')
+]
+
+p.add_tools(hover)
+
+show(p)
+
